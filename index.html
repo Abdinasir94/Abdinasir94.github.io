@@ -351,7 +351,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   </div>
   <div class="card" style="margin-bottom:10px">
     <div class="ct">Developer Portals & Observability</div>
-    <div class="chips"><span class="chip ch-pk">Cortex IDP</span><span class="chip ch-pk">Backstage</span><span class="chip ch-pk">Prometheus</span><span class="chip ch-pk">Grafana</span><span class="chip ch-pk">Loki</span><span class="chip ch-pk">Datadog</span><span class="chip ch-pk">OpenTelemetry</span><span class="chip ch-pk">PagerDuty</span></div>
+    <div class="chips"><span class="chip ch-pk">idp IDP</span><span class="chip ch-pk">Backstage</span><span class="chip ch-pk">Prometheus</span><span class="chip ch-pk">Grafana</span><span class="chip ch-pk">Loki</span><span class="chip ch-pk">Datadog</span><span class="chip ch-pk">OpenTelemetry</span><span class="chip ch-pk">PagerDuty</span></div>
   </div>
   <div class="card" style="margin-bottom:10px">
     <div class="ct">Security & Identity</div>
@@ -373,7 +373,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
         <div class="tlt"><div class="tlr">Senior Platform Engineer — Core Platform</div><div class="tld2">2022 — Present</div></div>
         <div class="tlc">Multi-tenant SaaS · GCP · Kubernetes · Kong · GitOps</div>
         <div class="tldesc">Designing and operating a multi-tenant SaaS developer platform on GCP and Kubernetes. GitOps-first — no ClickOps. Terraform manages GCP foundation; Crossplane handles per-tenant resource compositions. Kong Konnect governs API gateway config via decK. ArgoCD manages RBAC and multi-environment deployments. Full tenant onboarding automated via GitLab CI/CD scaffold pipelines — new tenants provisioned end-to-end with zero manual steps. Internal Developer Portal (IDP) auto-registers services with scorecard checks and ownership. Moesif enables per-tenant API metering and LLM usage-based billing. OpenBao manages secrets and data plane certificates; cert-manager handles TLS lifecycle.</div>
-        <div class="chips" style="margin-top:7px"><span class="chip ch-b">GCP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-b">Crossplane</span><span class="chip ch-b">Terraform</span><span class="chip ch-pk">Cortex</span><span class="chip ch-a">Moesif</span></div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-b">GCP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-b">Crossplane</span><span class="chip ch-b">Terraform</span><span class="chip ch-pk">idp</span><span class="chip ch-a">Moesif</span></div>
       </div>
       <div class="tli">
         <div class="tld past"></div>
@@ -453,9 +453,9 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   </div>
   <div class="proj" onclick="tp(this)">
     <div class="ph2"><div class="pn">Internal Developer Portal (IDP)</div><div style="display:flex;align-items:center"><span class="badge bp">Demo</span><span class="parr">▼</span></div></div>
-    <div class="pd">Internal Developer Portal with built-in scaffold templates, service catalogue, scorecard checks, and real-time provisioning dashboard — vendor-agnostic design (compatible with Cortex or Backstage).</div>
-    <div class="pdet">Tenant submits via portal → GitLab pipeline triggered from scaffold template → Crossplane provisions GCP resources → Kong gateway configured → IDP entry auto-created with scorecard checks, ownership, and runbook links → Moesif billing wired → dashboard shows real-time provisioning status. Portal design is vendor-neutral: works with Cortex, Backstage, or a custom implementation. Scaffold templates are pre-built and version-controlled, enabling consistent onboarding across teams. Built to demo the full platform-as-a-product vision to engineering leadership.</div>
-    <div class="chips"><span class="chip ch-pk">Cortex</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-gr">React</span><span class="chip ch-b">GCP</span></div>
+    <div class="pd">Internal Developer Portal with built-in scaffold templates, service catalogue, scorecard checks, and real-time provisioning dashboard — vendor-agnostic design (compatible with idp or Backstage).</div>
+    <div class="pdet">Tenant submits via portal → GitLab pipeline triggered from scaffold template → Crossplane provisions GCP resources → Kong gateway configured → IDP entry auto-created with scorecard checks, ownership, and runbook links → Moesif billing wired → dashboard shows real-time provisioning status. Portal design is vendor-neutral: works with idp, Backstage, or a custom implementation. Scaffold templates are pre-built and version-controlled, enabling consistent onboarding across teams. Built to demo the full platform-as-a-product vision to engineering leadership.</div>
+    <div class="chips"><span class="chip ch-pk">idp</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-gr">React</span><span class="chip ch-b">GCP</span></div>
   </div>
   <div class="proj" onclick="tp(this)">
     <div class="ph2"><div class="pn">GKE TLS Certificate Rotation Automation</div><div style="display:flex;align-items:center"><span class="badge ba">Ops</span><span class="parr">▼</span></div></div>
@@ -509,7 +509,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Secrets management (OpenBao/Vault)</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Kubernetes CKA certified</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Multi-cloud experience (GCP + AWS)</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Developer portal registered (Cortex)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Developer portal registered (idp)</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>7+ years professional experience</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Public GitHub portfolio live</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-w">~</div>Published architecture blog / case studies</div><span class="badge ba">Planned</span></div>
@@ -605,7 +605,7 @@ function launch(){
 setTimeout(next,500);
 
 // PAGES
-const PM={overview:{bc:'abdinasir-mohamed',tag:'8 yrs · GCP · AWS'},stack:{bc:'tech-stack',tag:'20+ technologies'},experience:{bc:'work-experience',tag:'2015 – present'},projects:{bc:'projects',tag:'15+ shipped'},certs:{bc:'certifications',tag:'10+ certs'},scorecard:{bc:'cortex-scorecard',tag:'Score: 94'},contact:{bc:'contact',tag:'Available now'}};
+const PM={overview:{bc:'abdinasir-mohamed',tag:'8 yrs · GCP · AWS'},stack:{bc:'tech-stack',tag:'20+ technologies'},experience:{bc:'work-experience',tag:'2015 – present'},projects:{bc:'projects',tag:'15+ shipped'},certs:{bc:'certifications',tag:'10+ certs'},scorecard:{bc:'idp-scorecard',tag:'Score: 94'},contact:{bc:'contact',tag:'Available now'}};
 function gp(id,btn){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));
@@ -642,7 +642,7 @@ const CD=[
   {l:'Experience',s:'8 years work history',p:'experience',i:'📋'},
   {l:'Projects',s:'15+ shipped',p:'projects',i:'🚀'},
   {l:'Certifications',s:'CKA + 10 more',p:'certs',i:'🏅'},
-  {l:'Scorecard',s:'Cortex metrics · 94',p:'scorecard',i:'📊'},
+  {l:'Scorecard',s:'idp metrics · 94',p:'scorecard',i:'📊'},
   {l:'Contact',s:'Get in touch',p:'contact',i:'💬'},
   {l:'GCP · Kubernetes · Terraform',s:'Core stack',p:'stack',i:'☁'},
   {l:'AWS · EKS · S3 · IAM',s:'AWS stack',p:'stack',i:'🟡'},
