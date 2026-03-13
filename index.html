@@ -16,8 +16,6 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:hidden;min-height:100vh}
-
-/* SPLASH */
 #splash{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .6s .2s}
 #splash.hide{opacity:0;pointer-events:none}
 .s-term{background:#010409;border:1px solid var(--b2);border-radius:10px;padding:22px 26px;width:min(520px,90vw);font-family:var(--mono);font-size:12.5px;line-height:2}
@@ -26,12 +24,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:h
 @keyframes blink{50%{opacity:0}}
 .skip-btn{color:var(--muted);font-size:11px;cursor:pointer;border:1px solid var(--b2);padding:4px 12px;border-radius:20px;background:none;transition:all .15s}
 .skip-btn:hover{color:var(--text);border-color:var(--b)}
-
-/* LAYOUT */
 #app{display:flex;min-height:100vh;opacity:0;transition:opacity .5s}
 #app.show{opacity:1}
-
-/* SIDEBAR */
 .sidebar{width:220px;background:var(--sb);border-right:1px solid var(--b);display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto;z-index:50;transition:transform .3s}
 .sb-logo{padding:14px;border-bottom:1px solid var(--b);display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
 .sb-mark{width:30px;height:30px;background:linear-gradient(135deg,#1f6feb,#7c3aed);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;letter-spacing:-.5px;flex-shrink:0}
@@ -46,8 +40,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:h
 .sb-foot{margin-top:auto;padding:12px 14px;border-top:1px solid var(--b)}
 .dot-g{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);animation:pdot 2s ease-in-out infinite}
 @keyframes pdot{0%,100%{box-shadow:0 0 0 0 rgba(63,185,80,.4)}50%{box-shadow:0 0 0 5px rgba(63,185,80,0)}}
-
-/* TOPBAR */
 .topbar{position:fixed;top:0;left:220px;right:0;height:44px;background:rgba(13,17,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--b);display:flex;align-items:center;justify-content:space-between;padding:0 20px;z-index:40}
 .bc{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px}
 .bc span{color:var(--text);font-weight:500}.bc-sep{color:var(--subtle)}
@@ -61,21 +53,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:h
 .kbd-h{font-size:11px;color:var(--subtle);display:flex;align-items:center;gap:3px;cursor:pointer}
 .kbd-h:hover{color:var(--muted)}
 kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding:1px 5px;font-size:10px;font-family:var(--mono)}
-
-/* MAIN */
 .main{margin-left:220px;padding-top:44px;flex:1}
 .page{display:none;padding:22px;animation:fi .2s ease}
 .page.active{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-
-/* ENTITY HEADER */
 .ent-hdr{display:flex;align-items:flex-start;gap:16px;padding:18px;background:var(--card);border:1px solid var(--b);border-radius:10px;margin-bottom:18px;position:relative;overflow:hidden}
 .ent-hdr::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--cyan),var(--teal));opacity:.7}
 .av{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#1f6feb,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;flex-shrink:0;border:2px solid rgba(88,166,255,.25)}
 .en{font-size:18px;font-weight:600;margin-bottom:3px}
 .er{color:var(--blue);font-size:13px;margin-bottom:8px}
-
-/* CARDS */
 .card{background:var(--card);border:1px solid var(--b);border-radius:8px;padding:15px;transition:border-color .15s}
 .card:hover{border-color:var(--b2)}
 .ct{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:11px;display:flex;align-items:center;gap:5px}
@@ -83,13 +69,9 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:12px}
 .g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-
-/* STATS */
 .stat{background:var(--card2);border:1px solid var(--b);border-radius:7px;padding:11px;text-align:center}
 .sn{font-size:24px;font-weight:700;line-height:1}
 .sl{font-size:10px;color:var(--muted);margin-top:3px}
-
-/* PROGRESS */
 .pr{margin-bottom:8px}
 .ph{display:flex;justify-content:space-between;margin-bottom:3px;font-size:12px}
 .pb{height:4px;background:var(--b2);border-radius:2px;overflow:hidden}
@@ -100,8 +82,6 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .pf-a{background:linear-gradient(90deg,#9e6a03,#d29922)}
 .pf-t{background:linear-gradient(90deg,#0d7377,#39d353)}
 .pf-c{background:linear-gradient(90deg,#1a7f8e,#76e3ea)}
-
-/* CHIPS */
 .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
 .chip{padding:2px 9px;border-radius:10px;font-size:11px;font-weight:500;cursor:default;transition:all .15s}
 .chip:hover{transform:translateY(-1px)}
@@ -112,21 +92,17 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .ch-gr{background:rgba(125,133,144,.1);color:var(--muted);border:1px solid rgba(125,133,144,.2)}
 .ch-pk{background:rgba(247,120,186,.1);color:var(--pink);border:1px solid rgba(247,120,186,.2)}
 .ch-c{background:rgba(118,227,234,.1);color:var(--cyan);border:1px solid rgba(118,227,234,.2)}
-
-/* TIMELINE */
 .tl{padding-left:18px;position:relative}
 .tl::before{content:'';position:absolute;left:5px;top:5px;bottom:5px;width:1px;background:var(--b2)}
 .tli{position:relative;margin-bottom:22px}
 .tld{position:absolute;left:-16px;top:5px;width:9px;height:9px;border-radius:50%;border:2px solid var(--bg)}
 .tld.curr{background:var(--green);box-shadow:0 0 8px rgba(63,185,80,.5)}
 .tld.past{background:var(--blue)}
-.tlt{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px}
-.tlr{font-weight:500;font-size:13.5px}
+.tlt{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;flex-wrap:wrap;gap:4px}
+.tlr{font-weight:600;font-size:13.5px}
 .tld2{font-size:11px;color:var(--muted)}
 .tlc{font-size:12px;color:var(--blue);margin-bottom:5px}
 .tldesc{font-size:12px;color:var(--muted);line-height:1.65}
-
-/* PROJECTS */
 .proj{background:var(--card);border:1px solid var(--b);border-radius:8px;padding:14px;margin-bottom:9px;cursor:pointer;transition:all .2s}
 .proj:hover{border-color:var(--blue)}
 .ph2{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px}
@@ -136,15 +112,11 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .proj.open .pdet{display:block}
 .parr{color:var(--muted);font-size:11px;transition:transform .2s;margin-left:6px}
 .proj.open .parr{transform:rotate(180deg)}
-
-/* CERTS */
 .cert-item{display:flex;align-items:center;gap:12px;padding:11px 13px;background:var(--card2);border:1px solid var(--b);border-radius:7px;margin-bottom:7px;transition:border-color .15s}
 .cert-item:hover{border-color:var(--b2)}
 .cert-icon{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .cert-name{font-weight:500;font-size:13px}
 .cert-sub{font-size:11px;color:var(--muted);margin-top:1px}
-
-/* SCORECARD */
 .sc-big{text-align:center;padding:18px 0}
 .sc-n{font-size:54px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--green),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .check-row{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--card2);border:1px solid var(--b);border-radius:6px;margin-bottom:5px;font-size:12.5px}
@@ -152,23 +124,17 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .ci-p{background:rgba(63,185,80,.15);color:var(--green)}
 .ci-w{background:rgba(210,153,34,.15);color:var(--amber)}
 .cl{display:flex;align-items:center}
-
-/* TERMINAL */
 .term{background:#010409;border:1px solid var(--b2);border-radius:8px;overflow:hidden}
 .tbar{background:#161b22;padding:7px 12px;display:flex;align-items:center;gap:5px;border-bottom:1px solid var(--b)}
 .td{width:10px;height:10px;border-radius:50%}
 .tbody{padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.9}
 .tp{color:var(--green)}.tc{color:var(--text)}.to{color:var(--muted)}.tk{color:var(--blue)}.tv{color:var(--purple)}.ts{color:var(--amber)}
-
-/* CONTACT */
 .cg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
 .ci2{display:flex;align-items:center;gap:11px;padding:12px;background:var(--card2);border:1px solid var(--b);border-radius:7px;transition:all .15s;cursor:pointer;text-decoration:none;color:var(--text)}
 .ci2:hover{border-color:var(--blue);background:rgba(88,166,255,.04)}
 .ci-ic{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
 .ci-lb{font-size:10px;color:var(--muted);margin-bottom:1px}
 .ci-vl{font-size:12.5px;font-weight:500}
-
-/* CMD PALETTE */
 #pal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:flex-start;justify-content:center;padding-top:15vh;backdrop-filter:blur(4px)}
 #pal.open{display:flex}
 .pbox{background:#1c2230;border:1px solid var(--b2);border-radius:10px;width:min(560px,90vw);box-shadow:0 24px 64px rgba(0,0,0,.6);overflow:hidden}
@@ -181,17 +147,12 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 .pit-ic{width:26px;height:26px;border-radius:5px;background:var(--b2);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
 .pit-s{font-size:11px;color:var(--muted);margin-left:auto}
 .pfoo{padding:7px 14px;border-top:1px solid var(--b);display:flex;gap:12px;font-size:11px;color:var(--subtle)}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
-
-/* MOBILE */
 .hb{display:none;position:fixed;top:10px;left:10px;z-index:60;background:var(--card2);border:1px solid var(--b2);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text)}
 @media(max-width:768px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:none}
+  .sidebar{transform:translateX(-100%)}.sidebar.open{transform:none}
   .main{margin-left:0}.topbar{left:0}.hb{display:flex}
   .g2,.g3,.g4,.cg{grid-template-columns:1fr}
   .ent-hdr{flex-direction:column}
@@ -200,13 +161,11 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 </head>
 <body>
 
-<!-- SPLASH -->
 <div id="splash">
   <div class="s-term"><div id="sl"></div><span class="cur"></span></div>
   <button class="skip-btn" onclick="skip()">skip intro</button>
 </div>
 
-<!-- CMD PALETTE -->
 <div id="pal">
   <div class="pbox">
     <div class="piw">
@@ -241,7 +200,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   <div class="sb-sec" style="border-top:1px solid var(--b);margin-top:4px">
     <div class="sb-lbl">Entity</div>
     <div style="padding:5px 14px;font-size:11px;color:var(--muted)">Kind <span style="color:var(--blue)">Component</span></div>
-    <div style="padding:2px 14px;font-size:11px;color:var(--muted)">Exp <span style="color:var(--text)">7+ years</span></div>
+    <div style="padding:2px 14px;font-size:11px;color:var(--muted)">Exp <span style="color:var(--text)">8+ years</span></div>
     <div style="padding:2px 14px 6px;font-size:11px;color:var(--muted)">Domain <span style="color:var(--text)">Cloud · Platform</span></div>
   </div>
   <div class="sb-foot">
@@ -267,7 +226,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
     <div class="av">AM</div>
     <div style="flex:1">
       <div class="en">Abdinasir Mohamed Abdi</div>
-      <div class="er">Cloud & Platform Engineer · DevOps · Infrastructure Automation · 7+ Years</div>
+      <div class="er">Senior Platform Engineer · Cloud Infrastructure · DevOps · 8+ Years</div>
       <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px">
         <span class="badge bg">● Available</span>
         <span class="badge bb">GCP</span><span class="badge bb">AWS</span>
@@ -278,34 +237,32 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
       </div>
     </div>
   </div>
-
   <div class="g2">
     <div class="card">
       <div class="ct">About</div>
-      <p style="font-size:12.5px;color:var(--muted);line-height:1.75">7+ years building cloud infrastructure, developer platforms, and DevOps pipelines across GCP and AWS. Specialises in multi-tenant SaaS platforms, GitOps, API gateway engineering, and internal developer portals — treating infrastructure as a product.</p>
-      <p style="font-size:12.5px;color:var(--muted);line-height:1.75;margin-top:8px">Strong track record across the full platform stack: from designing cloud architecture and writing IaC to running Kubernetes clusters, governing API gateways, and shipping self-service developer tooling.</p>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.75">Senior Platform Engineer with 8+ years of experience across cloud infrastructure, platform engineering, and DevOps. Currently building a large-scale multi-tenant developer platform at Humain on GCP, with deep expertise in GitOps, infrastructure automation, API management, and observability.</p>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.75;margin-top:8px">Proven delivery across AWS, Azure, GCP, and OCI — from network security foundations at Rackspace to AI infrastructure at SDAIA to full platform-as-a-product at Humain.</p>
     </div>
     <div class="card">
       <div class="ct">Quick stats</div>
       <div class="g2" style="margin-bottom:0;gap:7px">
-        <div class="stat"><div class="sn" style="color:var(--blue)">7+</div><div class="sl">Years exp.</div></div>
-        <div class="stat"><div class="sn" style="color:var(--green)">20+</div><div class="sl">Technologies</div></div>
+        <div class="stat"><div class="sn" style="color:var(--blue)">8+</div><div class="sl">Years exp.</div></div>
+        <div class="stat"><div class="sn" style="color:var(--green)">4</div><div class="sl">Cloud platforms</div></div>
         <div class="stat"><div class="sn" style="color:var(--purple)">10+</div><div class="sl">Certs</div></div>
-        <div class="stat"><div class="sn" style="color:var(--amber)">15+</div><div class="sl">Projects</div></div>
+        <div class="stat"><div class="sn" style="color:var(--amber)">7</div><div class="sl">Employers</div></div>
       </div>
     </div>
   </div>
-
   <div class="g2" style="margin-bottom:0">
     <div class="card">
       <div class="ct">Core domains</div>
       <div style="display:flex;flex-direction:column;gap:5px">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Platform Engineering<span class="badge bb" style="font-size:10px">primary</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Cloud Infrastructure (GCP + AWS)<span class="badge bb" style="font-size:10px">primary</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">DevOps & CI/CD<span class="badge bp" style="font-size:10px">strong</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">API Gateway & Management<span class="badge bp" style="font-size:10px">strong</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Internal Developer Portals (IDP)<span class="badge ba" style="font-size:10px">active</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Platform Engineering (IDP)<span class="badge bb" style="font-size:10px">primary</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Cloud Infrastructure (GCP / AWS / Azure)<span class="badge bb" style="font-size:10px">primary</span></div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">Kubernetes & Container Orchestration<span class="badge bp" style="font-size:10px">strong</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">API Gateway & Management (Kong)<span class="badge bp" style="font-size:10px">strong</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">GitOps & CI/CD (GitLab / ArgoCD)<span class="badge bp" style="font-size:10px">strong</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--card2);border:1px solid var(--b);border-radius:6px;font-size:12px">MLOps / AI Infrastructure<span class="badge ba" style="font-size:10px">active</span></div>
       </div>
     </div>
     <div class="card">
@@ -317,7 +274,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
         <div class="pr"><div class="ph"><span>Terraform / IaC</span><span style="color:var(--muted)">91%</span></div><div class="pb"><div class="pf pf-p" data-w="91"></div></div></div>
         <div class="pr"><div class="ph"><span>GitLab CI/CD & GitOps</span><span style="color:var(--muted)">89%</span></div><div class="pb"><div class="pf pf-t" data-w="89"></div></div></div>
         <div class="pr"><div class="ph"><span>Kong Konnect / API Platform</span><span style="color:var(--muted)">87%</span></div><div class="pb"><div class="pf pf-a" data-w="87"></div></div></div>
-        <div class="pr"><div class="ph"><span>AWS</span><span style="color:var(--muted)">82%</span></div><div class="pb"><div class="pf pf-c" data-w="82"></div></div></div>
+        <div class="pr"><div class="ph"><span>AWS</span><span style="color:var(--muted)">85%</span></div><div class="pb"><div class="pf pf-c" data-w="85"></div></div></div>
       </div>
     </div>
   </div>
@@ -325,42 +282,16 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 
 <!-- TECH STACK -->
 <div class="page" id="page-stack">
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">GCP — Google Cloud Platform</div>
-    <div class="chips"><span class="chip ch-b">GKE</span><span class="chip ch-b">Cloud Run</span><span class="chip ch-b">Cloud SQL</span><span class="chip ch-b">Cloud Storage (GCS)</span><span class="chip ch-b">VPC Networking</span><span class="chip ch-b">IAM & Workload Identity</span><span class="chip ch-b">Pub/Sub</span><span class="chip ch-b">Cloud Armor</span><span class="chip ch-b">Cloud Build</span><span class="chip ch-b">Artifact Registry</span><span class="chip ch-b">Cloud DNS</span><span class="chip ch-b">Secret Manager</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">AWS — Amazon Web Services</div>
-    <div class="chips"><span class="chip ch-a">EKS</span><span class="chip ch-a">EC2</span><span class="chip ch-a">S3</span><span class="chip ch-a">RDS</span><span class="chip ch-a">VPC</span><span class="chip ch-a">IAM</span><span class="chip ch-a">ECR</span><span class="chip ch-a">Lambda</span><span class="chip ch-a">Route 53</span><span class="chip ch-a">CloudWatch</span><span class="chip ch-a">ALB / NLB</span><span class="chip ch-a">Secrets Manager</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">Containers & Kubernetes</div>
-    <div class="chips"><span class="chip ch-g">Kubernetes (CKA)</span><span class="chip ch-g">Helm</span><span class="chip ch-g">ArgoCD</span><span class="chip ch-g">Docker</span><span class="chip ch-g">Kustomize</span><span class="chip ch-g">Cert-Manager</span><span class="chip ch-g">Node Problem Detector</span><span class="chip ch-g">KEDA</span><span class="chip ch-g">Ingress-NGINX</span><span class="chip ch-g">Cluster Autoscaler</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">Infrastructure as Code</div>
-    <div class="chips"><span class="chip ch-p">Terraform</span><span class="chip ch-p">Crossplane</span><span class="chip ch-p">Terragrunt</span><span class="chip ch-p">Ansible</span><span class="chip ch-p">Pulumi</span><span class="chip ch-p">CloudFormation</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">CI/CD & GitOps</div>
-    <div class="chips"><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-p">GitHub Actions</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-p">Flux</span><span class="chip ch-p">Jenkins</span><span class="chip ch-p">Tekton</span><span class="chip ch-p">GitOps workflows</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">API Platform & Gateway</div>
-    <div class="chips"><span class="chip ch-a">Kong Konnect</span><span class="chip ch-a">decK</span><span class="chip ch-a">Moesif</span><span class="chip ch-a">AWS API Gateway</span><span class="chip ch-a">Istio</span><span class="chip ch-a">Envoy</span><span class="chip ch-a">OpenAPI / Swagger</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">Developer Portals & Observability</div>
-    <div class="chips"><span class="chip ch-pk">idp IDP</span><span class="chip ch-pk">Backstage</span><span class="chip ch-pk">Prometheus</span><span class="chip ch-pk">Grafana</span><span class="chip ch-pk">Loki</span><span class="chip ch-pk">Datadog</span><span class="chip ch-pk">OpenTelemetry</span><span class="chip ch-pk">PagerDuty</span></div>
-  </div>
-  <div class="card" style="margin-bottom:10px">
-    <div class="ct">Security & Identity</div>
-    <div class="chips"><span class="chip ch-gr">OpenBao / Vault</span><span class="chip ch-gr">Keycloak</span><span class="chip ch-gr">OIDC / OAuth2</span><span class="chip ch-gr">GCP IAM</span><span class="chip ch-gr">AWS IAM</span><span class="chip ch-gr">mTLS</span><span class="chip ch-gr">RBAC</span><span class="chip ch-gr">Network Policies</span><span class="chip ch-gr">SOPS</span></div>
-  </div>
-  <div class="card">
-    <div class="ct">Languages & Tooling</div>
-    <div class="chips"><span class="chip ch-c">Bash / Shell</span><span class="chip ch-c">Python</span><span class="chip ch-c">Go (basics)</span><span class="chip ch-c">YAML / HCL</span><span class="chip ch-c">Linux</span><span class="chip ch-c">Git</span><span class="chip ch-c">Jira</span><span class="chip ch-c">Confluence</span></div>
-  </div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">Platform / IDP</div><div class="chips"><span class="chip ch-pk">Humanitec</span><span class="chip ch-pk">Cortex IDP</span><span class="chip ch-pk">Crossplane</span><span class="chip ch-pk">ArgoCD</span><span class="chip ch-pk">GitOps</span><span class="chip ch-pk">Backstage</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">Cloud Platforms</div><div class="chips"><span class="chip ch-b">GCP</span><span class="chip ch-a">AWS</span><span class="chip ch-b">Azure</span><span class="chip ch-gr">OCI Cloud</span><span class="chip ch-gr">Huawei Cloud</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">Containers & Kubernetes</div><div class="chips"><span class="chip ch-g">Kubernetes (CKA)</span><span class="chip ch-g">Helm</span><span class="chip ch-g">ArgoCD</span><span class="chip ch-g">Docker</span><span class="chip ch-g">GKE</span><span class="chip ch-g">EKS</span><span class="chip ch-g">AKS</span><span class="chip ch-g">Kustomize</span><span class="chip ch-g">cert-manager</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">IaC & Automation</div><div class="chips"><span class="chip ch-p">Terraform</span><span class="chip ch-p">Crossplane</span><span class="chip ch-p">Helm</span><span class="chip ch-p">Packer</span><span class="chip ch-p">CloudFormation</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">CI/CD</div><div class="chips"><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-p">Jenkins</span><span class="chip ch-p">Azure DevOps</span><span class="chip ch-p">CircleCI</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">API Platform & Gateway</div><div class="chips"><span class="chip ch-a">Kong Konnect</span><span class="chip ch-a">decK</span><span class="chip ch-a">Moesif</span><span class="chip ch-a">REST API Gateway design</span><span class="chip ch-a">API OPS</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">Observability</div><div class="chips"><span class="chip ch-pk">Grafana</span><span class="chip ch-pk">Loki</span><span class="chip ch-pk">Tempo</span><span class="chip ch-pk">Mimir</span><span class="chip ch-pk">Prometheus</span><span class="chip ch-pk">Alloy</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">AI / MLOps</div><div class="chips"><span class="chip ch-c">MLOps pipelines</span><span class="chip ch-c">Azure ML</span><span class="chip ch-c">NVIDIA H100</span><span class="chip ch-c">HPC (DDN/Lustre)</span></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="ct">Security & Identity</div><div class="chips"><span class="chip ch-gr">OpenBao / Vault</span><span class="chip ch-gr">Keycloak</span><span class="chip ch-gr">IDS/IPS</span><span class="chip ch-gr">Cisco ASA</span><span class="chip ch-gr">F5 BIG-IP</span><span class="chip ch-gr">mTLS</span><span class="chip ch-gr">RBAC</span></div></div>
+  <div class="card"><div class="ct">OS & Scripting</div><div class="chips"><span class="chip ch-c">Linux (RHEL/Ubuntu)</span><span class="chip ch-c">Bash</span><span class="chip ch-c">PowerShell</span></div></div>
 </div>
 
 <!-- EXPERIENCE -->
@@ -368,34 +299,91 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   <div class="card" style="margin-bottom:12px">
     <div class="ct">Work History</div>
     <div class="tl">
+
+      <!-- 1 -->
       <div class="tli">
         <div class="tld curr"></div>
-        <div class="tlt"><div class="tlr">Senior Platform Engineer — Core Platform</div><div class="tld2">2022 — Present</div></div>
-        <div class="tlc">Multi-tenant SaaS · GCP · Kubernetes · Kong · GitOps</div>
-        <div class="tldesc">Designing and operating a multi-tenant SaaS developer platform on GCP and Kubernetes. GitOps-first — no ClickOps. Terraform manages GCP foundation; Crossplane handles per-tenant resource compositions. Kong Konnect governs API gateway config via decK. ArgoCD manages RBAC and multi-environment deployments. Full tenant onboarding automated via GitLab CI/CD scaffold pipelines — new tenants provisioned end-to-end with zero manual steps. Internal Developer Portal (IDP) auto-registers services with scorecard checks and ownership. Moesif enables per-tenant API metering and LLM usage-based billing. OpenBao manages secrets and data plane certificates; cert-manager handles TLS lifecycle.</div>
-        <div class="chips" style="margin-top:7px"><span class="chip ch-b">GCP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-b">Crossplane</span><span class="chip ch-b">Terraform</span><span class="chip ch-pk">idp</span><span class="chip ch-a">Moesif</span></div>
+        <div class="tlt">
+          <div class="tlr">Senior Platform Engineer</div>
+          <div class="tld2">Apr 2025 – Present</div>
+        </div>
+        <div class="tlc">Humain · Riyadh, Saudi Arabia</div>
+        <div class="tldesc">Leading design and delivery of a large-scale multi-tenant developer platform on GCP, enabling self-service infrastructure provisioning for product engineering teams. Architecting composable, policy-driven platform capabilities using Humanitec (IDP), Crossplane, and Terraform across all tenants. Driving API OPS strategy with Kong Konnect via GitOps-based control plane management through GitLab and ArgoCD. Integrating Cortex IDP for service scorecards and compliance tracking; implementing full-stack observability with Grafana, Loki, Tempo, Mimir, and Prometheus. Supporting MLOps pipelines and managing hybrid GCP/OCI Cloud environments.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-b">GCP</span><span class="chip ch-pk">Humanitec</span><span class="chip ch-b">Crossplane</span><span class="chip ch-p">Terraform</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-p">GitLab CI</span><span class="chip ch-pk">Cortex IDP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-c">MLOps</span></div>
       </div>
+
+      <!-- 2 -->
       <div class="tli">
         <div class="tld past"></div>
-        <div class="tlt"><div class="tlr">DevOps / Cloud Engineer</div><div class="tld2">2020 — 2022</div></div>
-        <div class="tlc">Cloud Infrastructure · GCP & AWS · CI/CD</div>
-        <div class="tldesc">Implemented CI/CD pipelines across GitLab and GitHub Actions. Managed GKE and EKS clusters. Built Terraform modules for reusable infrastructure. Introduced GitOps workflows, reducing manual deployment overhead by ~70%. Ran Kubernetes workload migrations and autoscaling configurations.</div>
-        <div class="chips" style="margin-top:7px"><span class="chip ch-g">Kubernetes</span><span class="chip ch-b">GCP</span><span class="chip ch-a">AWS</span><span class="chip ch-p">Terraform</span><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-g">Helm</span></div>
+        <div class="tlt">
+          <div class="tlr">Senior Cloud Engineer</div>
+          <div class="tld2">Mar 2024 – Apr 2025</div>
+        </div>
+        <div class="tlc">SDAIA · Riyadh, Saudi Arabia</div>
+        <div class="tldesc">Designed and operated Kubernetes infrastructure for large-scale AI and data workloads at national scale. Managed NVIDIA H100 GPU clusters for AI model training and HPC workloads; configured Azure ML environments for data science teams. Administered Azure and Huawei Cloud environments; automated provisioning with Azure DevOps and Terraform. Supported HPC systems with DDN storage and Lustre parallel filesystem integration.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-b">Azure</span><span class="chip ch-gr">Huawei Cloud</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-p">Terraform</span><span class="chip ch-b">Azure ML</span><span class="chip ch-c">NVIDIA H100</span><span class="chip ch-c">HPC</span></div>
       </div>
+
+      <!-- 3 -->
       <div class="tli">
         <div class="tld past"></div>
-        <div class="tlt"><div class="tlr">Infrastructure Engineer</div><div class="tld2">2018 — 2020</div></div>
-        <div class="tlc">Cloud Ops · GCP · Linux · Automation</div>
-        <div class="tldesc">Managed GCP infrastructure, Linux systems, networking, and on-call operations. Built internal automation tooling and scripts. Led migration of on-prem workloads to cloud-native GCP architecture. First exposure to containerisation and Kubernetes.</div>
-        <div class="chips" style="margin-top:7px"><span class="chip ch-b">GCP</span><span class="chip ch-gr">Linux</span><span class="chip ch-c">Bash</span><span class="chip ch-c">Python</span><span class="chip ch-g">Docker</span></div>
+        <div class="tlt">
+          <div class="tlr">Platform Engineer</div>
+          <div class="tld2">Jun 2023 – Mar 2024</div>
+        </div>
+        <div class="tlc">PPS Edenred · United Kingdom</div>
+        <div class="tldesc">Designed and deployed AWS environments using Terraform; delivered on-premises to AWS migration projects with minimal downtime. Collaborated with development teams to align migration efforts with business and technical requirements.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-a">AWS</span><span class="chip ch-p">Terraform</span><span class="chip ch-gr">Cloud Migration</span></div>
       </div>
+
+      <!-- 4 -->
+      <div class="tli">
+        <div class="tld past"></div>
+        <div class="tlt">
+          <div class="tlr">Cloud Engineer</div>
+          <div class="tld2">Aug 2022 – May 2023</div>
+        </div>
+        <div class="tlc">Claranet · United Kingdom</div>
+        <div class="tldesc">Deployed customer cloud infrastructure using Terraform and CloudFormation; built and maintained CI/CD pipelines with GitLab CI and Jenkins. Migrated on-premises workloads to AWS; performed Kubernetes node maintenance including AMI patching and node draining.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-a">AWS</span><span class="chip ch-p">Terraform</span><span class="chip ch-p">GitLab CI</span><span class="chip ch-g">Kubernetes</span></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="tli">
+        <div class="tld past"></div>
+        <div class="tlt">
+          <div class="tlr">AWS Cloud / InfoSec / Network Security Engineer</div>
+          <div class="tld2">Mar 2019 – Aug 2022</div>
+        </div>
+        <div class="tlc">Rackspace · United Kingdom</div>
+        <div class="tldesc">Managed customer AWS infrastructure using IaC; built and operated CI/CD pipelines across multiple environments. Investigated network intrusions and mitigated threats as part of the Network Defense team using IDS/IPS tooling. Conducted vulnerability scanning and remediation; configured Cisco ASA firewalls, F5 BIG-IP, and Brocade ADX appliances.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-a">AWS</span><span class="chip ch-p">IaC</span><span class="chip ch-gr">IDS/IPS</span><span class="chip ch-gr">Cisco ASA</span><span class="chip ch-gr">F5 BIG-IP</span></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="tli">
+        <div class="tld past"></div>
+        <div class="tlt">
+          <div class="tlr">Cisco Support Analyst</div>
+          <div class="tld2">Feb 2018 – Mar 2019</div>
+        </div>
+        <div class="tlc">Softcat · United Kingdom</div>
+        <div class="tldesc">Provided network support in a 24×7 NOC, managing enterprise incidents and resolving technical issues under SLA.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-gr">Cisco</span><span class="chip ch-gr">Networking</span><span class="chip ch-gr">NOC</span></div>
+      </div>
+
+      <!-- 7 -->
       <div class="tli" style="margin-bottom:0">
         <div class="tld past"></div>
-        <div class="tlt"><div class="tlr">Systems / IT Engineer</div><div class="tld2">2015 — 2018</div></div>
-        <div class="tlc">On-prem Infrastructure · Networking · Linux</div>
-        <div class="tldesc">Managed on-premises servers, networking, and IT infrastructure. Introduced Linux-based systems and early automation. Foundation in systems thinking that shaped later cloud and platform engineering work.</div>
-        <div class="chips" style="margin-top:7px"><span class="chip ch-gr">Linux</span><span class="chip ch-gr">Networking</span><span class="chip ch-gr">VMware</span><span class="chip ch-c">Bash</span></div>
+        <div class="tlt">
+          <div class="tlr">IT Analyst</div>
+          <div class="tld2">Mar 2017 – Feb 2018</div>
+        </div>
+        <div class="tlc">Martindale Pharma · United Kingdom</div>
+        <div class="tldesc">Delivered 1st/2nd line technical support; managed Active Directory accounts and permissions.</div>
+        <div class="chips" style="margin-top:7px"><span class="chip ch-gr">Active Directory</span><span class="chip ch-gr">Technical Support</span></div>
       </div>
+
     </div>
   </div>
 </div>
@@ -403,77 +391,51 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 <!-- CERTIFICATIONS -->
 <div class="page" id="page-certs">
   <div class="card" style="margin-bottom:14px">
-    <div class="ct">Active Certifications</div>
-        <div class="cert-item">
-      <div class="cert-icon" style="background:rgba(88,166,255,.12)">☁</div>
-      <div style="flex:1">
-        <div class="cert-name">Microsoft Certified: Azure AI Fundamentals</div>
-        <div class="cert-sub">Microsoft · Issued Aug 2024</div>
-      </div>
-      <span class="badge bb">Active</span>
-    </div>
-    <div class="cert-item">
-      <div class="cert-icon" style="background:rgba(63,185,80,.12)">⎈</div>
-      <div style="flex:1">
-        <div class="cert-name">Certified Kubernetes Administrator (CKA)</div>
-        <div class="cert-sub">Linux Foundation / CNCF</div>
-      </div>
-      <span class="badge bg">Active</span>
-    </div>
-  </div>
-  <div class="card">
-    <div class="ct">Previous Certifications — 2021 onwards</div>
-    <p style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px">Accumulated 10+ certifications across cloud and DevOps disciplines since 2021, covering GCP, AWS, Kubernetes, and infrastructure tooling.</p>
-    <div class="cert-item">
-      <div class="cert-icon" style="background:rgba(210,153,34,.12)">☁</div>
-      <div><div class="cert-name">AWS Certified (multiple paths)</div><div class="cert-sub">Amazon Web Services · 2021–2023</div></div>
-    </div>
-    
-    <div class="cert-item">
-      <div class="cert-icon" style="background:rgba(188,140,255,.12)">🛡</div>
-      <div><div class="cert-name">DevOps & Infrastructure tooling</div><div class="cert-sub">Terraform, Kubernetes, CI/CD · 2021–2024</div></div>
-    </div>
-    <p style="font-size:11px;color:var(--subtle);margin-top:10px">Full certification list available on request or via LinkedIn profile.</p>
+    <div class="ct">Certifications</div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(63,185,80,.12)">⎈</div><div style="flex:1"><div class="cert-name">Certified Kubernetes Administrator (CKA)</div><div class="cert-sub">Linux Foundation / CNCF</div></div><span class="badge bg">Active</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(188,140,255,.12)">🔷</div><div style="flex:1"><div class="cert-name">HashiCorp Terraform Associate</div><div class="cert-sub">HashiCorp</div></div><span class="badge bg">Active</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(210,153,34,.12)">☁</div><div style="flex:1"><div class="cert-name">AWS Solutions Architect – Associate</div><div class="cert-sub">Amazon Web Services</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(210,153,34,.12)">🛡</div><div style="flex:1"><div class="cert-name">AWS Security – Specialty</div><div class="cert-sub">Amazon Web Services</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(210,153,34,.12)">⚙</div><div style="flex:1"><div class="cert-name">AWS SysOps Administrator – Associate</div><div class="cert-sub">Amazon Web Services</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(210,153,34,.12)">💻</div><div style="flex:1"><div class="cert-name">AWS Developer – Associate</div><div class="cert-sub">Amazon Web Services</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(88,166,255,.12)">☁</div><div style="flex:1"><div class="cert-name">Azure Fundamentals (AZ-900)</div><div class="cert-sub">Microsoft</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(88,166,255,.12)">🤖</div><div style="flex:1"><div class="cert-name">Azure AI Fundamentals (AI-900)</div><div class="cert-sub">Microsoft</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(118,227,234,.12)">🧠</div><div style="flex:1"><div class="cert-name">NVIDIA AI Enterprise Administration</div><div class="cert-sub">NVIDIA</div></div><span class="badge ba">Prev.</span></div>
+    <div class="cert-item"><div class="cert-icon" style="background:rgba(125,133,144,.12)">☁</div><div style="flex:1"><div class="cert-name">Huawei Cloud Solutions Architect</div><div class="cert-sub">Huawei</div></div><span class="badge ba">Prev.</span></div>
   </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="page" id="page-projects">
   <div class="proj" onclick="tp(this)">
-    <div class="ph2"><div class="pn">Multi-tenant SaaS Platform</div><div style="display:flex;align-items:center"><span class="badge bg">Production</span><span class="parr">▼</span></div></div>
-    <div class="pd">End-to-end composable developer platform — single platform.yaml drives GCP provisioning, API gateway config, IDP registration, and billing in one GitOps flow.</div>
-    <div class="pdet">Full GitOps pipeline with zero ClickOps: Terraform manages GCP foundation (VPC, IAM, GKE). Crossplane compositions provision GCS, CloudSQL, and custom XRDs per tenant. Kong Konnect gateway auto-provisioned with governance policies. ArgoCD handles RBAC and application deployment across environments. Built-in IDP (developer portal) auto-registers each service with scorecard checks, ownership metadata, and runbook links. Moesif instruments per-tenant API metering enabling usage-based billing and LLM token tracking. OpenBao manages data plane certificates. Scaffold templates are pre-built — new tenants go from request to running environment in minutes with no manual steps.</div>
-    <div class="chips"><span class="chip ch-b">GCP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-b">Crossplane</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-pk">IDP</span><span class="chip ch-b">Terraform</span><span class="chip ch-a">Moesif</span><span class="chip ch-a">LLM Metering</span></div>
+    <div class="ph2"><div class="pn">Multi-tenant SaaS Developer Platform</div><div style="display:flex;align-items:center"><span class="badge bg">Production</span><span class="parr">▼</span></div></div>
+    <div class="pd">End-to-end composable developer platform at Humain — single platform.yaml drives GCP provisioning, API gateway config, IDP registration, and billing in one GitOps flow.</div>
+    <div class="pdet">Full GitOps pipeline with zero ClickOps: Terraform manages GCP foundation (VPC, IAM, GKE). Crossplane compositions provision GCS, CloudSQL, and custom XRDs per tenant. Kong Konnect gateway auto-provisioned via decK with governance policies. ArgoCD handles RBAC and application deployment across environments. Cortex IDP auto-registers each service with scorecard checks, ownership metadata, and runbook links. Moesif instruments per-tenant API metering enabling usage-based billing and LLM token tracking. OpenBao manages data plane certificates.</div>
+    <div class="chips"><span class="chip ch-b">GCP</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-b">Crossplane</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">ArgoCD</span><span class="chip ch-pk">Cortex IDP</span><span class="chip ch-p">Terraform</span><span class="chip ch-a">Moesif</span></div>
   </div>
   <div class="proj" onclick="tp(this)">
     <div class="ph2"><div class="pn">Tenant API OPS Scaffolding Pipeline</div><div style="display:flex;align-items:center"><span class="badge bb">Active</span><span class="parr">▼</span></div></div>
-    <div class="pd">GitLab CI/CD pipeline scaffolding new tenant API projects end-to-end — fully automated API OPS with LLM monetisation, metering, and billing.</div>
-    <div class="pdet">End-to-end API OPS automation: scaffolds GitLab repo from a ready-made template, provisions Kong services/routes via decK, registers the service in the developer portal with owner metadata, and wires up Moesif for per-tenant API metering and usage analytics. Moesif billing integration enables LLM API monetisation — tracking token usage, enforcing rate limits, and triggering billing events per tenant. Kong request-transformer plugin handles cross-boundary token injection. Designed to support AI/LLM product teams needing usage-based billing out of the box. Covers Jira tickets PE-501–PE-508.</div>
-    <div class="chips"><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-a">Kong / decK</span><span class="chip ch-pk">Developer Portal</span><span class="chip ch-a">Moesif</span><span class="chip ch-a">LLM Billing</span><span class="chip ch-b">Terraform</span></div>
+    <div class="pd">GitLab CI/CD pipeline scaffolding new tenant API projects end-to-end — from repo creation to Kong provisioning, IDP registration, and Moesif billing wiring.</div>
+    <div class="pdet">Scaffolds GitLab repo from a template (Marten's reference repo), provisions Kong services/routes via decK, registers the service in Cortex with owner metadata, and wires up Moesif for per-tenant API metering. Covers Jira tickets PE-501–PE-508: tenant provisioning, service/route automation, gateway governance, and operational changes.</div>
+    <div class="chips"><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-a">Kong / decK</span><span class="chip ch-pk">Cortex IDP</span><span class="chip ch-a">Moesif</span><span class="chip ch-p">Terraform</span></div>
   </div>
   <div class="proj" onclick="tp(this)">
-    <div class="ph2"><div class="pn">Internal Developer Portal (IDP)</div><div style="display:flex;align-items:center"><span class="badge bp">Demo</span><span class="parr">▼</span></div></div>
-    <div class="pd">Internal Developer Portal with built-in scaffold templates, service catalogue, scorecard checks, and real-time provisioning dashboard — vendor-agnostic design (compatible with idp or Backstage).</div>
-    <div class="pdet">Tenant submits via portal → GitLab pipeline triggered from scaffold template → Crossplane provisions GCP resources → Kong gateway configured → IDP entry auto-created with scorecard checks, ownership, and runbook links → Moesif billing wired → dashboard shows real-time provisioning status. Portal design is vendor-neutral: works with idp, Backstage, or a custom implementation. Scaffold templates are pre-built and version-controlled, enabling consistent onboarding across teams. Built to demo the full platform-as-a-product vision to engineering leadership.</div>
-    <div class="chips"><span class="chip ch-pk">idp</span><span class="chip ch-a">Kong Konnect</span><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-gr">React</span><span class="chip ch-b">GCP</span></div>
+    <div class="ph2"><div class="pn">AI / HPC Infrastructure — SDAIA</div><div style="display:flex;align-items:center"><span class="badge bg">Shipped</span><span class="parr">▼</span></div></div>
+    <div class="pd">National-scale AI infrastructure on Azure and Huawei Cloud — NVIDIA H100 GPU clusters, Azure ML, and HPC workloads with DDN/Lustre storage.</div>
+    <div class="pdet">Designed and operated Kubernetes infrastructure for large-scale AI and data workloads at SDAIA. Managed NVIDIA H100 GPU clusters for AI model training; configured Azure ML environments for data science teams. Supported HPC systems with DDN storage and Lustre parallel filesystem integration. Automated provisioning with Azure DevOps and Terraform.</div>
+    <div class="chips"><span class="chip ch-b">Azure</span><span class="chip ch-g">Kubernetes</span><span class="chip ch-c">NVIDIA H100</span><span class="chip ch-c">Azure ML</span><span class="chip ch-c">HPC</span><span class="chip ch-p">Terraform</span></div>
   </div>
   <div class="proj" onclick="tp(this)">
     <div class="ph2"><div class="pn">GKE TLS Certificate Rotation Automation</div><div style="display:flex;align-items:center"><span class="badge ba">Ops</span><span class="parr">▼</span></div></div>
-    <div class="pd">Automated Kubernetes TLS certificate lifecycle for Keycloak/NGINX ingress using OpenBao and cert-manager.</div>
-    <div class="pdet">Resolved production certificate expiry in a Keycloak/NGINX ingress deployment on GKE. Integrated OpenBao for data plane cert management and cert-manager for lifecycle automation. Resolved concurrent GCP OAuth/SSL auth issues with Terraform and gcloud.</div>
+    <div class="pd">Automated Kubernetes TLS certificate lifecycle for Keycloak/NGINX ingress using OpenBao and cert-manager on GKE.</div>
+    <div class="pdet">Resolved production certificate expiry in a Keycloak/NGINX ingress deployment on GKE. Integrated OpenBao for data plane cert management and cert-manager for lifecycle automation. Also resolved concurrent GCP OAuth/SSL authentication issues with Terraform and gcloud, and fixed GitLab private module registry 401 errors in CI.</div>
     <div class="chips"><span class="chip ch-g">Kubernetes</span><span class="chip ch-gr">OpenBao</span><span class="chip ch-gr">Keycloak</span><span class="chip ch-g">cert-manager</span><span class="chip ch-b">GKE</span></div>
   </div>
   <div class="proj" onclick="tp(this)">
-    <div class="ph2"><div class="pn">AWS Multi-Account Landing Zone</div><div style="display:flex;align-items:center"><span class="badge bg">Shipped</span><span class="parr">▼</span></div></div>
-    <div class="pd">Multi-account AWS architecture with centralised networking, IAM federation, and GitOps-driven deployments.</div>
-    <div class="pdet">Designed and implemented AWS Control Tower-based landing zone with AWS Organizations. Centralised VPC with Transit Gateway. IAM Identity Center (SSO) for federated access. EKS clusters managed via Terraform. GitHub Actions pipelines for infrastructure deployment. CloudWatch + Datadog for observability.</div>
-    <div class="chips"><span class="chip ch-a">AWS</span><span class="chip ch-a">EKS</span><span class="chip ch-p">Terraform</span><span class="chip ch-p">GitHub Actions</span><span class="chip ch-pk">Datadog</span></div>
-  </div>
-  <div class="proj" onclick="tp(this)">
     <div class="ph2"><div class="pn">Kong Gateway Governance Framework</div><div style="display:flex;align-items:center"><span class="badge ba">Governance</span><span class="parr">▼</span></div></div>
-    <div class="pd">GitOps-driven API governance model for Kong Konnect covering provisioning standards, plugin policy, and operational procedures.</div>
-    <div class="pdet">Defined governance for tenant onboarding, service/route automation via decK as GitOps config tool, plugin enforcement policies, and change management procedures. Established principle of creating new gateways over renaming existing ones to avoid Terraform state drift.</div>
-    <div class="chips"><span class="chip ch-a">Kong Konnect</span><span class="chip ch-a">decK</span><span class="chip ch-b">Terraform</span><span class="chip ch-p">GitLab CI/CD</span></div>
+    <div class="pd">GitOps-driven API governance model for Kong Konnect — provisioning standards, plugin policy, and operational procedures across tenants.</div>
+    <div class="pdet">Defined governance for tenant onboarding, service/route automation via decK as GitOps config tool, plugin enforcement policies, and change management procedures. Established principle of creating new gateways over renaming existing ones to avoid Terraform state drift. Integrated OpenBao for data plane certificate management.</div>
+    <div class="chips"><span class="chip ch-a">Kong Konnect</span><span class="chip ch-a">decK</span><span class="chip ch-p">Terraform</span><span class="chip ch-p">GitLab CI/CD</span><span class="chip ch-gr">OpenBao</span></div>
   </div>
 </div>
 
@@ -495,7 +457,7 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
         <div class="pr"><div class="ph"><span>Platform Engineering</span><span style="color:var(--muted)">93%</span></div><div class="pb"><div class="pf pf-b" data-w="93"></div></div></div>
         <div class="pr"><div class="ph"><span>DevOps & CI/CD</span><span style="color:var(--muted)">91%</span></div><div class="pb"><div class="pf pf-p" data-w="91"></div></div></div>
         <div class="pr"><div class="ph"><span>Kubernetes</span><span style="color:var(--muted)">95%</span></div><div class="pb"><div class="pf pf-t" data-w="95"></div></div></div>
-        <div class="pr"><div class="ph"><span>API Platform</span><span style="color:var(--muted)">88%</span></div><div class="pb"><div class="pf pf-a" data-w="88"></div></div></div>
+        <div class="pr"><div class="ph"><span>API Platform (Kong)</span><span style="color:var(--muted)">88%</span></div><div class="pb"><div class="pf pf-a" data-w="88"></div></div></div>
         <div class="pr"><div class="ph"><span>Security & Compliance</span><span style="color:var(--muted)">85%</span></div><div class="pb"><div class="pf pf-c" data-w="85"></div></div></div>
       </div>
     </div>
@@ -503,16 +465,17 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   <div class="card">
     <div class="ct">Scorecard checks</div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>GitOps enforced — zero ClickOps</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>IaC covers 100% of infrastructure (Terraform + Crossplane)</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Multi-environment pipeline configured</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>API gateway deployed & governed (Kong)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>IaC covers infrastructure (Terraform + Crossplane)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Multi-environment pipeline configured (GitLab + ArgoCD)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>API gateway deployed & governed (Kong Konnect)</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Secrets management (OpenBao/Vault)</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Kubernetes CKA certified</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Multi-cloud experience (GCP + AWS)</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Developer portal registered (idp)</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>7+ years professional experience</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Multi-cloud experience (GCP + AWS + Azure)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Developer portal integrated (Cortex IDP)</div><span class="badge bg">Pass</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>8+ years professional experience</div><span class="badge bg">Pass</span></div>
     <div class="check-row"><div class="cl"><div class="ci ci-p">✓</div>Public GitHub portfolio live</div><span class="badge bg">Pass</span></div>
-    <div class="check-row"><div class="cl"><div class="ci ci-w">~</div>Published architecture blog / case studies</div><span class="badge ba">Planned</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-w">~</div>Published blog / architecture case studies</div><span class="badge ba">Planned</span></div>
+    <div class="check-row"><div class="cl"><div class="ci ci-w">~</div>GCP Professional certification</div><span class="badge ba">Planned</span></div>
   </div>
 </div>
 
@@ -530,11 +493,12 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
         <div style="margin-top:4px">
           <span class="to">{</span><br>
           &nbsp;&nbsp;<span class="tk">"name"</span><span class="to">:</span> <span class="ts">"Abdinasir Mohamed Abdi"</span><span class="to">,</span><br>
-          &nbsp;&nbsp;<span class="tk">"role"</span><span class="to">:</span> <span class="ts">"Cloud &amp; Platform Engineer"</span><span class="to">,</span><br>
-          &nbsp;&nbsp;<span class="tk">"experience"</span><span class="to">:</span> <span class="tv">8</span><span class="to">,</span><br>
+          &nbsp;&nbsp;<span class="tk">"role"</span><span class="to">:</span> <span class="ts">"Senior Platform Engineer"</span><span class="to">,</span><br>
+          &nbsp;&nbsp;<span class="tk">"company"</span><span class="to">:</span> <span class="ts">"Humain"</span><span class="to">,</span><br>
+          &nbsp;&nbsp;<span class="tk">"experience_years"</span><span class="to">:</span> <span class="tv">8</span><span class="to">,</span><br>
           &nbsp;&nbsp;<span class="tk">"location"</span><span class="to">:</span> <span class="ts">"Riyadh, Saudi Arabia"</span><span class="to">,</span><br>
           &nbsp;&nbsp;<span class="tk">"available"</span><span class="to">:</span> <span class="tv">true</span><span class="to">,</span><br>
-          &nbsp;&nbsp;<span class="tk">"cloud"</span><span class="to">: [</span><span class="ts">"GCP"</span><span class="to">,</span><span class="ts">"AWS"</span><span class="to">],</span><br>
+          &nbsp;&nbsp;<span class="tk">"cloud"</span><span class="to">: [</span><span class="ts">"GCP"</span><span class="to">,</span><span class="ts">"AWS"</span><span class="to">,</span><span class="ts">"Azure"</span><span class="to">],</span><br>
           &nbsp;&nbsp;<span class="tk">"stack"</span><span class="to">: [</span><span class="ts">"Kubernetes"</span><span class="to">,</span><span class="ts">"Terraform"</span><span class="to">,</span><span class="ts">"Kong"</span><span class="to">,</span><span class="ts">"GitOps"</span><span class="to">,</span><span class="ts">"ArgoCD"</span><span class="to">],</span><br>
           &nbsp;&nbsp;<span class="tk">"github"</span><span class="to">:</span> <span class="ts">"github.com/abdinasir94"</span><br>
           <span class="to">}</span>
@@ -544,9 +508,9 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
   </div>
   <div class="cg">
     <a class="ci2" href="mailto:abdinasir_94@hotmail.co.uk"><div class="ci-ic" style="background:rgba(88,166,255,.12)">✉</div><div><div class="ci-lb">Email</div><div class="ci-vl">abdinasir_94@hotmail.co.uk</div></div></a>
-    <a class="ci2" href="https://linkedin.com/in/abdinasir-m-abdi-79a5a9105" target="_blank"><div class="ci-ic" style="background:rgba(88,166,255,.12);font-size:14px;font-weight:700">in</div><div><div class="ci-lb">LinkedIn</div><div class="ci-vl">abdinasir-m-abdi</div></div></a>
-    <a class="ci2" href="https://github.com/abdinasir94" target="_blank"><div class="ci-ic" style="background:rgba(188,140,255,.12)">⌥</div><div><div class="ci-lb">GitHub</div><div class="ci-vl">github.com/abdinasir94</div></div></a>
-    <a class="ci2" href="mailto:abdinasir_94@hotmail.co.uk"><div class="ci-ic" style="background:rgba(63,185,80,.12)">💼</div><div><div class="ci-lb">Freelance enquiries</div><div class="ci-vl">Get in touch by email</div></div></a>
+    <a class="ci2" onclick="window.open('https://linkedin.com/in/abdinasir-m-abdi','_blank')"><div class="ci-ic" style="background:rgba(88,166,255,.12);font-size:14px;font-weight:700">in</div><div><div class="ci-lb">LinkedIn</div><div class="ci-vl">abdinasir-m-abdi</div></div></a>
+    <a class="ci2" onclick="window.open('https://github.com/abdinasir94','_blank')"><div class="ci-ic" style="background:rgba(188,140,255,.12)">⌥</div><div><div class="ci-lb">GitHub Portfolio</div><div class="ci-vl">github.com/abdinasir94</div></div></a>
+    <a class="ci2" href="mailto:abdinasir_94@hotmail.co.uk"><div class="ci-ic" style="background:rgba(63,185,80,.12)">💼</div><div><div class="ci-lb">Freelance / Upwork</div><div class="ci-vl">Get in touch by email</div></div></a>
   </div>
 </div>
 
@@ -554,32 +518,18 @@ kbd{background:var(--card2);border:1px solid var(--b2);border-radius:4px;padding
 </div>
 
 <script>
-// SPLASH
 const L=[
-  {t:'p',s:'abdinasir@devportal ~ $ '},
-  {t:'c',s:'kubectl get engineer abdinasir -o json',d:55},
-  {t:'g'},
-  {t:'o',s:'{'},
-  {t:'kv',k:'  "name"',v:'"Abdinasir Mohamed Abdi"'},
-  {t:'kv',k:'  "experience"',v:'"8 years"'},
-  {t:'kv',k:'  "cloud"',v:'["GCP","AWS"]'},
-  {t:'kv',k:'  "k8s"',v:'"CKA certified"'},
-  {t:'kv',k:'  "available"',v:'true'},
-  {t:'o',s:'}'},
-  {t:'g'},
-  {t:'p',s:'abdinasir@devportal ~ $ '},
-  {t:'c',s:'./launch-portfolio.sh',d:70},
-  {t:'g'},
+  {t:'p',s:'abdinasir@devportal ~ $ '},{t:'c',s:'kubectl get engineer abdinasir -o json',d:55},{t:'g'},
+  {t:'o',s:'{'},{t:'kv',k:'  "name"',v:'"Abdinasir Mohamed Abdi"'},{t:'kv',k:'  "role"',v:'"Senior Platform Engineer"'},
+  {t:'kv',k:'  "company"',v:'"Humain · Riyadh"'},{t:'kv',k:'  "cloud"',v:'["GCP","AWS","Azure"]'},
+  {t:'kv',k:'  "available"',v:'true'},{t:'o',s:'}'},{t:'g'},
+  {t:'p',s:'abdinasir@devportal ~ $ '},{t:'c',s:'./launch-portfolio.sh',d:70},{t:'g'},
   {t:'a',s:'✓ devportal loaded — welcome'},
 ];
 let li=0,ci=0,el=document.getElementById('sl');
 function rl(l){
   const d=document.createElement('div');
-  if(l.t==='p'||l.t==='c'){
-    const cls=l.t==='p'?'s-p':'s-c';
-    d.innerHTML=`<span class="${cls}"></span>`;
-    el.appendChild(d);return d;
-  }
+  if(l.t==='p'||l.t==='c'){const cls=l.t==='p'?'s-p':'s-c';d.innerHTML=`<span class="${cls}"></span>`;el.appendChild(d);return d;}
   if(l.t==='o')d.innerHTML=`<span class="s-o">${l.s}</span>`;
   if(l.t==='kv')d.innerHTML=`<span class="s-a">${l.k}</span><span class="s-o">: </span><span class="s-v">${l.v}</span>`;
   if(l.t==='a')d.innerHTML=`<span class="s-a">${l.s}</span>`;
@@ -597,15 +547,10 @@ function next(){
   } else{rl(l);li++;setTimeout(next,l.t==='g'?70:110);}
 }
 function skip(){launch();}
-function launch(){
-  document.getElementById('splash').classList.add('hide');
-  document.getElementById('app').classList.add('show');
-  setTimeout(animP,400);
-}
+function launch(){document.getElementById('splash').classList.add('hide');document.getElementById('app').classList.add('show');setTimeout(animP,400);}
 setTimeout(next,500);
 
-// PAGES
-const PM={overview:{bc:'abdinasir-mohamed',tag:'8 yrs · GCP · AWS'},stack:{bc:'tech-stack',tag:'20+ technologies'},experience:{bc:'work-experience',tag:'2015 – present'},projects:{bc:'projects',tag:'15+ shipped'},certs:{bc:'certifications',tag:'10+ certs'},scorecard:{bc:'idp-scorecard',tag:'Score: 94'},contact:{bc:'contact',tag:'Available now'}};
+const PM={overview:{bc:'abdinasir-mohamed',tag:'8 yrs · GCP · AWS'},stack:{bc:'tech-stack',tag:'20+ technologies'},experience:{bc:'work-experience',tag:'7 roles · 2017–present'},projects:{bc:'projects',tag:'5 featured'},certs:{bc:'certifications',tag:'10 certs'},scorecard:{bc:'idp-scorecard',tag:'Score: 94'},contact:{bc:'contact',tag:'Available now'}};
 function gp(id,btn){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));
@@ -621,32 +566,19 @@ function gp(id,btn){
   else if(id==='overview')setTimeout(animP,200);
   document.getElementById('sb').classList.remove('open');
 }
-
-// PROGRESS
 function animP(){document.querySelectorAll('#progs .pf').forEach(f=>{f.style.width=f.dataset.w+'%';});}
 function animSC(){
   document.querySelectorAll('#sc-progs .pf').forEach(f=>{f.style.width=f.dataset.w+'%';});
   let n=0;const t=setInterval(()=>{n=Math.min(n+2,94);document.getElementById('sc-n').textContent=n;if(n>=94)clearInterval(t);},18);
 }
-
-// PROJECTS
 function tp(el){el.classList.toggle('open');}
-
-// SIDEBAR
 function toggleSB(){document.getElementById('sb').classList.toggle('open');}
 
-// CMD PALETTE
 const CD=[
-  {l:'Overview',s:'Home',p:'overview',i:'🏠'},
-  {l:'Tech Stack',s:'GCP · AWS · K8s · 20+ tools',p:'stack',i:'⎈'},
-  {l:'Experience',s:'8 years work history',p:'experience',i:'📋'},
-  {l:'Projects',s:'15+ shipped',p:'projects',i:'🚀'},
-  {l:'Certifications',s:'CKA + 10 more',p:'certs',i:'🏅'},
-  {l:'Scorecard',s:'idp metrics · 94',p:'scorecard',i:'📊'},
+  {l:'Overview',s:'Home',p:'overview',i:'🏠'},{l:'Tech Stack',s:'GCP · AWS · K8s · 20+ tools',p:'stack',i:'⎈'},
+  {l:'Experience',s:'7 roles · 2017–present',p:'experience',i:'📋'},{l:'Projects',s:'5 featured projects',p:'projects',i:'🚀'},
+  {l:'Certifications',s:'CKA + 9 more',p:'certs',i:'🏅'},{l:'Scorecard',s:'IDP metrics · 94',p:'scorecard',i:'📊'},
   {l:'Contact',s:'Get in touch',p:'contact',i:'💬'},
-  {l:'GCP · Kubernetes · Terraform',s:'Core stack',p:'stack',i:'☁'},
-  {l:'AWS · EKS · S3 · IAM',s:'AWS stack',p:'stack',i:'🟡'},
-  {l:'Kong · Moesif · decK',s:'API platform',p:'stack',i:'🔀'},
 ];
 let csel=0;
 function openPal(){document.getElementById('pal').classList.add('open');document.getElementById('pi').value='';document.getElementById('pi').focus();rPal('');}
